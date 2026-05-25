@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #FFF;
+  min-height: 100vh;
+}
+
+.container-login {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* LADO ESQUERDO: FORMULÁRIO */
+.lado-esquerdo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.wrapper-formulario {
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo-senai {
+  font-size: 32px;
+  font-weight: 700;
+  color: rgb(0, 92, 170);
+  margin-bottom: 40px;
+}
+
+.link-esqueceu {
+  color: rgb(0, 92, 170);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link-esqueceu:hover {
+  border-bottom: 2px solid rgb(0, 92, 170);
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.subtitulo {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.rotulo {
+  display: block;
+  font-size: 14px;
+  margin: 20px 0 8px;
+  font-weight: 500;
+}
+
+.campo-entrada {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: 0.3s;
+}
+
+.campo-entrada:focus {
+  outline: none;
+  border-color: #003B73;
+  background: #FFF;
+}
+
+.botao-primario {
+  width: 100%;
+  padding: 14px;
+  background: #003B73;
+  color: #FFF;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: 0.3s;
+}
+
+.botao-primario:hover {
+  background: rgb(0, 92, 170);
+}
+
+
+.lado-direito {
+  flex: 1;
+  background: #003B73;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #FFF;
+  padding: 40px;
+}
+
+.badge-promo {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.conteudo-promo h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.botao-promo {
+  padding: 12px 30px;
+  background: #FFF;
+  color: rgb(0, 92, 170);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.oculto {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+
+  /* Navbar comum */
+  .navbar {
+    flex-direction: column !important;
+    padding: 15px !important;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-direction: column !important;
+    gap: 10px !important;
+    padding: 0;
+    width: 100%;
+  }
+
+  .navbar li a {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  /* Tela de Login (Lado a Lado para Empilhado) */
+  .container-login {
+    flex-direction: column !important;
+    height: auto !important;
+  }
+
+  .lado-direito {
+    display: none !important;
+    /* Esconde o painel azul decorativo no celular */
+  }
+
+  .lado-esquerdo {
+    width: 100% !important;
+    padding: 20px !important;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  /* Card de Abertura de Chamado (chamado.php) */
+  .formulario-cadastro,
+  .wrapper-formulario {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 25px !important;
+    box-shadow: none !important;
+    padding: 10px !important;
+  }
+}

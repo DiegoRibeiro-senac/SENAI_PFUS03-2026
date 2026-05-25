@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 2. NAVBAR */
+.navbar {
+    background: rgb(0, 92, 170);
+    box-shadow: 0px 0px 3px #ddd;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.navbar img {
+    height: 64px;
+    width: auto;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #003B73;
+}
+
+/* 3. GRID DE CONTEÚDO */
+.container {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container.tab-ativo {
+    display: grid;
+}
+
+/* 4. CARDS E COLUNAS */
+.coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* 5. TAGS DE PRIORIDADE */
+.tag-prioridade {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: -10px;
+    margin-left: 10px;
+    z-index: 2;
+    align-self: flex-start;
+    color: #ffffff;
+}
+
+.tag-prioridade.baixa {
+    background: #05cf4c;
+}
+
+.tag-prioridade.media {
+    background: #fbc02d;
+    color: #000;
+}
+
+.tag-prioridade.alta {
+    background: #fb8c00;
+}
+
+.tag-prioridade.urgente {
+    background: #e53935;
+}
+
+/* 6. BOTÕES */
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-detalhes {
+    background: #003B73;
+    color: #ffffff;
+    width: 100%;
+}
+
+.btn-aceitar {
+    background: #4caf50;
+    color: #ffffff;
+}
+
+.btn-concluir {
+    background: #2196f3;
+    color: #ffffff;
+}
+
+.btn-cancelar {
+    background: #e53935;
+    color: #ffffff;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 7. MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #eee;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* 8. FORMULÁRIOS E TABELAS */
+.tabela-detalhes {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.tabela-detalhes td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tabela-detalhes td:first-child {
+    font-weight: bold;
+    color: #666;
+    width: 35%;
+}
+
+textarea {
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin: 10px 0;
+    resize: vertical;
+    font-family: inherit;
+}
+
+textarea:focus {
+    border-color: #003B73;
+    outline: none;
+}
+
+/* 9. FILTROS */
+.filtro-container {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select-prioridade {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    flex: 1;
+    max-width: 300px;
+}
+
+.img-modal-detalhe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin: 10px auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+#row-foto td {
+    padding: 10px 0 !important;
+    width: 100% !important;
+}
+
+@media screen and (min-width: 769px) {
+    .img-modal-detalhe {
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column !important;
+        padding: 15px !important;
+        height: auto !important;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav-link {
+        text-align: center;
+        width: 100%;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        display: block;
+    }
+
+    .filtro-container,
+    .filtro-container form {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .select-prioridade,
+    .filtro-container form button {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .coluna {
+        width: 100%;
+    }
+
+    .modal-conteudo img {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 15px;
+    }
+
+    .modal-conteudo td {
+        padding: 0 0 15px 0 !important;
+    }
+
+    .modal-conteudo img {
+        max-height: 300px;
+        width: 100% !important;
+        object-fit: contain;
+        background-color: #eee;
+    }
+}
+
+.detalhes-texto {
+    font-size: 14px !important;
+    line-height: 1.4;
+}
+
+.tabela-detalhes,
+.tabela-detalhes tbody,
+.tabela-detalhes tr,
+.tabela-detalhes td {
+    display: block;
+    width: 100%;
+}
+
+.tabela-detalhes tr {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.tabela-detalhes td {
+    padding: 4px 0 !important;
+    border: none;
+}

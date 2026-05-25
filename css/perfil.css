@@ -1,0 +1,299 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7f9;
+  color: #1f2d3d;
+}
+
+.topo {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 30px;
+}
+
+.btn-novo {
+  background: #5aa9e6;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-novo:hover {
+  background: #4698d3;
+}
+
+.perfil {
+  margin-top: 5vh;
+  margin: 5vh auto;
+  /* Centraliza automaticamente */
+  justify-content: center;
+  /* Garante que o conteúdo flex fique no meio */
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 30px;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nome-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nome-area h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tag {
+  background: #e3f2fd;
+  color: #1e88e5;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cargo {
+  margin: 4px 0;
+  color: #6b7c93;
+}
+
+.email {
+  margin: 0;
+  font-size: 14px;
+  color: #4a5d73;
+}
+
+.card {
+  margin: 0 auto;
+  /* Centraliza o card na tela */
+  width: 90%;
+  /* Ocupa uma largura segura */
+  max-width: 800px;
+  /* Limita o tamanho em telas grandes */
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.descricao {
+  color: #6b7c93;
+  font-size: 14px;
+  margin: 6px 0 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 14px;
+  color: #6b7c93;
+  padding: 12px 8px;
+  border-bottom: 1px solid #e6eef6;
+}
+
+td {
+  padding: 14px 8px;
+  border-bottom: 1px solid #eef3f8;
+  font-size: 14px;
+}
+
+.direita {
+  text-align: right;
+}
+
+.badge {
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.baixo {
+  background: #e6f7f1;
+  color: #1b7f5a;
+}
+
+.resolvido {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.andamento {
+  background: #e8f5e9;
+  color: orange;
+}
+
+.baixo {
+  background: #e6f7f1;
+  color: #1b7f5a;
+}
+
+.grave {
+  background: #e6f7f1;
+  color: #eb3434;
+}
+
+.intermediaria {
+  background: #e6f7f1;
+  color: #aa9f3a;
+}
+
+.navbar {
+  background: rgb(0, 92, 170);
+  box-shadow: 0px 0px 3px #ddd;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar li {
+  color: #555;
+  cursor: pointer;
+  font-size: 14px;
+
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.navbar ul li a:hover {
+  background: #003B73;
+}
+
+.navbar img {
+  width: 250px;
+}
+
+.logo {
+  margin: 0 0 30px;
+  font-size: 20px;
+  color: #5aa9e6;
+  text-align: center;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #1f2d3d;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  background: #f0f6ff;
+  color: #1e88e5;
+}
+
+.menu .ativo a {
+  background: #e3f2fd;
+  color: #1e88e5;
+  font-weight: 600;
+}
+
+.oculto {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column !important;
+    padding: 15px !important;
+    height: auto !important;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column !important;
+    width: 100% !important;
+    padding: 0 !important;
+    gap: 5px !important;
+  }
+
+  .navbar ul li a {
+    padding: 12px !important;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  /* Centralização do Perfil */
+  .perfil {
+    margin-left: 0 !important;
+    /* Remove o margin fixo de 50vh */
+    margin-top: 20px !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 20px !important;
+  }
+
+  .avatar {
+    width: 120px !important;
+    height: 120px !important;
+  }
+
+  .nome-area {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .card {
+    margin-left: 0 !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+}
